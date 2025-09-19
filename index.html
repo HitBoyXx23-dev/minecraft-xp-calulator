@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minecraft XP Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Minecraft XP Calculator</h1>
+
+<div class="calculator-section">
+    <h2>Forward Calculator (Add XP Bottles)</h2>
+    <p>Enter your current level, current XP bar progress (0–17), and number of XP bottles:</p>
+    <input type="number" id="currentLevel" placeholder="Current Level" min="0">
+    <input type="number" id="currentXpBar" placeholder="XP Bar (0-17)" min="0" max="17" step="0.5">
+    <input type="number" id="bottles" placeholder="XP Bottles" min="0">
+    <button onclick="calculateNewLevel()">Calculate</button>
+
+    <div id="result"></div>
+    <div id="xpBarContainer"></div>
+    <div id="xpText"></div>
+</div>
+
+<hr>
+
+<div class="calculator-section">
+    <h2>Reverse Calculator (Bottles Needed to Reach Target Level)</h2>
+    <p>Enter your current level, current XP bar progress (0–17), and target level:</p>
+    <input type="number" id="currentLevel2" placeholder="Current Level" min="0">
+    <input type="number" id="currentXpBar2" placeholder="XP Bar (0-17)" min="0" max="17" step="0.5">
+    <input type="number" id="targetLevel" placeholder="Target Level" min="0">
+    <button onclick="calculateBottlesNeeded()">Calculate Bottles Needed</button>
+
+    <div id="reverseResult"></div>
+</div>
+
+<footer>
+    <span class="credit">Credits</span>
+    <div class="credit-popup">Created by HitBoyXx23 using GPT-5 Mini</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
