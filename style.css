@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    background: url('minecraft-blocks.jpg') repeat;
+    background-size: 50px 50px;
+    color: #fff;
+}
+
+h1, h2 {
+    text-shadow: 2px 2px #000;
+}
+
+input, button {
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 3px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #0f0;
+    color: #000;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #00cc00;
+}
+
+.calculator-section {
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+#result, #reverseResult, #xpText {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.xpBarSegment {
+    display: inline-block;
+    width: 18px;
+    height: 20px;
+    margin: 1px;
+    border: 1px solid #555;
+    background-color: #555;
+    position: relative;
+}
+
+.xpBarSegment.full::after,
+.xpBarSegment.half::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+
+.xpBarSegment.full::after {
+    width: 100%;
+    background-color: #0f0;
+}
+
+.xpBarSegment.half::after {
+    width: 50%;
+    background-color: #0f0;
+}
+
+/* Credit hover popup */
+footer {
+    margin-top: 50px;
+    position: relative;
+}
+
+.credit {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.credit-popup {
+    display: none;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.8);
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.credit:hover + .credit-popup {
+    display: block;
+}
