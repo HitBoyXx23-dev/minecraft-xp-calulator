@@ -73,6 +73,29 @@ button:hover {
     background-color: #0f0;
 }
 
+/* Bottle stack visualization */
+.bottleStack {
+    display: inline-block;
+    width: 20px;
+    height: 30px;
+    margin: 2px;
+    background-color: #0f0;
+    border: 1px solid #555;
+    border-radius: 3px;
+    position: relative;
+}
+
+.bottleStack.partial::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #555;
+    border-top: none;
+}
+
 /* Credit hover popup */
 footer {
     margin-top: 50px;
